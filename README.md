@@ -1,1 +1,1 @@
-### React TypeScript Weather
+### React/Redux TypeScript Weather
