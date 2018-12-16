@@ -29,7 +29,7 @@ class connectedDummyPosts extends React.Component<Props>{
 
   render(){
 
-    const dummyPosts = (
+    const dummyPostsList = (
       this.props.dummyPosts.map( (dummyPost:any) => {
         return (
           <li key={dummyPost.id}>
@@ -39,17 +39,18 @@ class connectedDummyPosts extends React.Component<Props>{
       })
     )
 
-    return(
+    const dummyPosts = (
       <div className='block'>
         <p className='menu-label'>
           Dummy Posts 
         </p>
         <ul className='menu-list'>
-          {dummyPosts}
+          {dummyPostsList}
         </ul>
-
       </div>
     )
+
+    return dummyPosts
   }
 }
 

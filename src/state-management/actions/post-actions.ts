@@ -1,7 +1,5 @@
 import postActionTypes from '../action-types/post-action-types'
 import postApiCalls from '../api-calls/post-api-calls'
-import actionTypes from '../action-types/post-action-types';
-
 
 const showDetailsofDummyPost = (postId:Number) => {
   return {

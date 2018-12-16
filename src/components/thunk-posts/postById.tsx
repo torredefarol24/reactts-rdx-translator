@@ -1,10 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {NavLink} from 'react-router-dom'
 import postActions from '../../state-management/actions/post-actions'
 
 const mapStateToProps = null
-
 const mapDispatchToProps = (dispatch:any) => {
   let mappedProps = {
     editPost : (post:any) => dispatch(postActions.editPost(post))

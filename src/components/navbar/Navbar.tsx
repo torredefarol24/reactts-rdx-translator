@@ -19,8 +19,8 @@ class Navbar extends React.Component{
   }
 
   render(){
-    return(
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+
+    const NavBrand = (
       <div className="navbar-brand">
         <NavLink className="navbar-item" to="/">
           {/* <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" /> */}
@@ -33,27 +33,34 @@ class Navbar extends React.Component{
           <span aria-hidden="true"></span>
         </a>
       </div>
+    )
 
+    const NavMenuItems = (
       <div id="navbarMenus" className={"navbar-menu " + this.state.classActive} >
         <div className="navbar-start">
-          <NavLink className="navbar-item" to="/">
+          <NavLink className="navbar-item" to="/" onClick={this.toggleNav.bind(this)}>
             Home
           </NavLink>
 
-          <NavLink className="navbar-item" to="/posts">
+          <NavLink className="navbar-item" to="/posts" onClick={this.toggleNav.bind(this)}>
             Posts
           </NavLink>
 
-          <NavLink className="navbar-item" to="/posts/thunk">
+          <NavLink className="navbar-item" to="/posts/thunk" onClick={this.toggleNav.bind(this)}>
             Posts (Thunk)
           </NavLink>
-
         </div>
-        <div className='navbar-end'></div>
       </div>
-      
-    </nav>
     )
+
+    const Navbar = (
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        {NavBrand}
+        {NavMenuItems}
+      </nav>
+    )
+
+    return Navbar
   }
 
 }

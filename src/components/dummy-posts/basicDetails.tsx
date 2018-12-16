@@ -47,13 +47,9 @@ class ConnectedPostDetails extends React.Component <Props> {
             <p className='subtitle'>By: </p><p className='title'><strong>{post.author}</strong></p>
           </div>
           <div className='block'>
-
             <NavLink className='button is-info' to={{pathname : "/posts/details/" + post.id, state : {post : post} }} > Read More </NavLink>
-
             <button className='button is-danger' onClick={ () => this.handleDelete(post.id) }>Delete</button>
-
           </div>
-
         </article>
       </div>
     )

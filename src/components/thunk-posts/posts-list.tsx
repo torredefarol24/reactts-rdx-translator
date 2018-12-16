@@ -27,8 +27,7 @@ class connectedposts extends React.Component<Props>{
   }
 
   render(){
-
-    const posts = (
+    const postList = (
       this.props.posts.map( (post:any) => {
         return (
           <li key={post.id}>
@@ -38,17 +37,18 @@ class connectedposts extends React.Component<Props>{
       })
     )
 
-    return(
+    const posts = (
       <div className='block'>
         <p className='menu-label'>
           Posts 
         </p>
         <ul className='menu-list'>
-          {posts}
+          {postList}
         </ul>
-
       </div>
     )
+
+    return posts
   }
 }
 

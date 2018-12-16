@@ -3,14 +3,12 @@ import {connect} from 'react-redux'
 import {NavLink} from 'react-router-dom'
 import postActions from '../../state-management/actions/post-actions'
 
-
 const mapStateToProps = (state:any) => {
   let mappedProps = {
     post : state.postReducer.selectedDummyPost
   }
   return mappedProps
 }
-
 
 const mapDispatchToProps = (dispatch:any) => {
   let mappedProps = {
@@ -19,7 +17,6 @@ const mapDispatchToProps = (dispatch:any) => {
   return mappedProps
 }
 
-
 export interface Props {
   post : any,
   deletePost : any,
@@ -27,14 +24,12 @@ export interface Props {
 
 
 class ConnectedPostDetails extends React.Component <Props> {
-
   handleDelete(postId:any){
     this.props.deletePost(postId)
   }
 
   render(){
     const { post } = this.props
-
     const selectedPost = (
       <div className='block'>
         <article className="message is-dark">
@@ -45,7 +40,6 @@ class ConnectedPostDetails extends React.Component <Props> {
             <NavLink className='button is-info' to={{pathname : "/posts/thunk/details/" + post.id, state : {post : post} }} > Read More </NavLink>
             <button className='button is-danger' onClick={ () => this.handleDelete(post.id) }>Delete</button>
           </div>
-
         </article>
       </div>
     )

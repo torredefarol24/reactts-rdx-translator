@@ -7,7 +7,7 @@ import DummyPostById from '../components/dummy-posts/postById'
 import ThunkPosts from '../components/thunk-posts/posts'
 import ThunkPostById from '../components/thunk-posts/postById'
 
-const RouteSetup:React.SFC = () => {
+const RouteSetup:React.FunctionComponent = () => {
   return(
     <div className='block'>
       <Route exact path='/' component={Greet} />
