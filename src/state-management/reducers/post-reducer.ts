@@ -63,7 +63,7 @@ const postReducer = (state=initialState, action:any) =>{
       return { ...state, posts: otherPosts, selectedDummyPost : {} }
 
     case postActionTypes.SHOW_ERROR:
-      console.log(action.payload)
+      console.error(action.payload)
       return { ...state, posts : []}
 
     case postActionTypes.ADD_DUMMY_POST:

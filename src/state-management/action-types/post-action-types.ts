@@ -1,4 +1,3 @@
-
 const actionTypes:any = {
   LOAD_POSTS : "LOAD_POSTS",
   SHOW_POST_DETAILS : "SHOW_POST_DETAILS",
