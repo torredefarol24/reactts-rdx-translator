@@ -2,6 +2,9 @@
   "name": "reactts-translator",
   "version": "0.1.0",
   "private": true,
+  "author": "Toufiq (https://twitter.com/burningraven06)",
+  "description" : "React / Redux w Thunk In TypeScript ",
+  "keywords" : ["react","redux","thunk","redux-thunk","react-redux","react-router","bulma-css","bulma-css-framework"],
   "dependencies": {
     "@types/node": "^10.12.15",
     "@types/react": "^16.7.17",
