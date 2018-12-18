@@ -2,13 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name='description' content="React Redux in TypeScript to build  PWA ">
-    <meta name="theme-color" content="#000000">
-
-    <link rel="manifest" href="/manifest.json">
-
+    <link rel="manifest" href="/manifest.json"/>
+    <meta name="theme-color" content="#838996"/>
     <link rel='stylesheet' href='assets/css/bulma.css'/>
     <link rel='stylesheet' href='assets/css/styles.css'/>
     <title>ReactTs Translate</title>
@@ -20,5 +18,11 @@
     <div id="root"></div>
 
   </body>
-  <script src='serviceWorkers/serviceWorkerChecker.js'></script>
+  <script>
+    if ("serviceWorker" in navigator){
+      navigator.serviceWorker.register("service-worker-cust.js")
+      .then( () => console.log("Cust SW Registered"))
+      .catch( err => console.error(`SW Error ${err}`))
+    }
+  </script>
 </html>

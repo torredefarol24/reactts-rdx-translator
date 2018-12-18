@@ -1,20 +1,21 @@
 self.addEventListener("install", event => {
   console.log("SW Installed")
   event.waitUntil(
-    caches.open("react-ts-translator")
+    caches.open("static-files")
     .then( cache => {
-      cache.addAll([
+      return cache.addAll([
         '/',
         '/index.html',
-        '/favicon.png',
-        '/assets/css/bulma.css',
-        '/assets/css/styles.css'
+        '/serviceWorkers/serviceWorkerChecker.js',
+        '/assets/css/styles.css',
+        '/assets/css/bulma.css'
       ])
     })
   )
+  
 })
 
-self.addEventListener("activate", () => {
+self.addEventListener("activate", event => {
   console.log("SW Activated")
 })
 
