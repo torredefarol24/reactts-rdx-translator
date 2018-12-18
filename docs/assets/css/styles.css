@@ -1,0 +1,13 @@
+.dummyPostBtn{
+  text-align: left
+}
+.bookmarkDelBtn{
+  cursor: pointer
+}
+.myName {
+  font-family: monospace;
+  font-weight: bold
+}
+.mt24{
+  margin-top: 24px;
+}
