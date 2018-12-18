@@ -52,10 +52,7 @@ class ConnectedBookmarks extends React.Component <Props, State>{
   bookmarkDelete = (bookmark:any): any => {
     return (
       <div className='column '>
-        <div className="notification is-danger bookmarkDelBtn" onClick={ () => this.handleDeleteBookmark(bookmark)}>
-          <p className='title has-text-centered'>Delete</p>
-        </div>
-
+        <button className="button is-danger" onClick={ () => this.handleDeleteBookmark(bookmark)}> Delete </button>
       </div>
     )
   }
@@ -80,8 +77,10 @@ class ConnectedBookmarks extends React.Component <Props, State>{
       
     const bookmarksList = (
       <div className='block'>
-        <h3 className='title is-3'> BookMarks </h3>
-        {bookmarks.length > 0 ? bookmarkItems : noBookmarks}
+        <div className='mobile-padding mt24'>
+          <h3 className='title is-3'> BookMarks </h3>
+          {bookmarks.length > 0 ? bookmarkItems : noBookmarks}
+        </div>
       </div>
     )
 

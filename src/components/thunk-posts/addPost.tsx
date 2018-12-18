@@ -59,25 +59,39 @@ class ConnectedAddPost extends React.Component<Props, State>{
   }
 
   render(){
-    return(
+
+    const AddPostForm = (
+      <form onSubmit={this.handleFormSubmit}>
+        <div className="field">
+          <label className="label">Title</label>
+          <div className="control">
+            <input className="input" type="texpost_titlet" placeholder="Your Post Heading" value={this.state.postTitle} onChange={this.handleTitleChange} id="post_title" name="postTitle"/>
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Body</label>
+          <div className="control">
+            <input className="input" type="text" placeholder="Your Message" value={this.state.postBody} onChange={this.handleBodyChange} id="post_body" name="postBody"/>
+          </div>
+        </div>
+        <button type='submit' className='button is-success'>Submit</button>
+      </form>
+    )
+
+    const AddPostFull = (
       <div className='block'>
-        <form onSubmit={this.handleFormSubmit}>
-          <div className="field">
-            <label className="label">Title</label>
-            <div className="control">
-              <input className="input" type="texpost_titlet" placeholder="Your Post Heading" value={this.state.postTitle} onChange={this.handleTitleChange} id="post_title" name="postTitle"/>
-            </div>
+        <article className='message is-success'>
+          <div className='message-header'>
+            <p> Add Post</p>
           </div>
-          <div className="field">
-            <label className="label">Body</label>
-            <div className="control">
-              <input className="input" type="text" placeholder="Your Message" value={this.state.postBody} onChange={this.handleBodyChange} id="post_body" name="postBody"/>
-            </div>
+          <div className='message-body'>
+            {AddPostForm}
           </div>
-          <button type='submit' className='button is-success'>Submit</button>
-        </form>
+        </article>
       </div>
     )
+
+    return AddPostFull
   }
 }
 

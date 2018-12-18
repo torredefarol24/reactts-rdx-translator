@@ -7,7 +7,7 @@ import DummyPostById from '../components/dummy-posts/postById'
 import ThunkPosts from '../components/thunk-posts/posts'
 import ThunkPostById from '../components/thunk-posts/postById'
 import Translator from '../components/translator/translator'
-import Bookmarks from '../components/bookmark/bookmark'
+import Bookmarks from '../components/bookmarks/bookmarks'
 
 const RouteSetup:React.FunctionComponent = () => {
   return(

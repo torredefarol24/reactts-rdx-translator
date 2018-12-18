@@ -1,29 +1,29 @@
 import React from 'react'
-import TranslatorForm from './form'
-import TranslationResults from './results'
+import TranslatorForm from './translation-form'
+import TranslationResultsBookmark from './translation-results-bookmark'
 
 const Translator:React.FunctionComponent = () =>{
   const TranslatorForm_Func = (
     <div className='block'>
-      <h3 className='subtitle is-3'> Translator </h3>
       <TranslatorForm></TranslatorForm>
     </div>
   )
   const TranslatorResults = (
     <div className='block'>
-      <h3 className='subtitle is-3'> Results</h3>
-      <TranslationResults></TranslationResults>
+      <TranslationResultsBookmark></TranslationResultsBookmark>
     </div>    
   )
   const TranslatorMain = (
     <div className='block'>
-      <h3 className='title is-3'> Yandex Translator API </h3>
-      <div className='columns'>
-        <div className='column is-half'>
-          {TranslatorForm_Func}
-        </div>
-        <div className='column is-half'>
-          {TranslatorResults}
+      <div className='mt24 mobile-padding'>
+        <h3 className='title is-3'> Translator </h3>
+        <div className='columns'>
+          <div className='column is-half'>
+            {TranslatorForm_Func}
+          </div>
+          <div className='column is-half'>
+            {TranslatorResults}
+          </div>
         </div>
       </div>
     </div>

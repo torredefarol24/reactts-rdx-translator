@@ -28,7 +28,7 @@ const mapDispatchToProps = (dispatch:any) => {
   return mappedProps
 }
 
-class ConnectedTranslationResults extends React.Component <Props, State>{
+class ConnectedTranslationResults_Bookmark extends React.Component <Props, State>{
   handleBookmark(){
     let newBookmark = {
       id : uuid(),
@@ -41,18 +41,25 @@ class ConnectedTranslationResults extends React.Component <Props, State>{
     const { translatedInfo, waitingMessage , bookMarkMessage} = this.props
     
     const waitingMessageDiv = (
-      <p className='subtitle'> {waitingMessage.message} </p>
+      <p> {waitingMessage.message} </p>
     )
 
     const bookMarkMessageDiv = (
-      <p className='subtitle'> {bookMarkMessage.message}</p>
+      <p> {bookMarkMessage.message}</p>
     )
 
     const Results = (
       <div className='block'>
-        <h5 className='subtitle is-5'>{translatedInfo.sourceText}</h5>
-        <h3 className='title is-3'>{translatedInfo.translatedText}</h3>
-        <button className='button is-info' onClick={this.handleBookmark.bind(this)}>Bookmark This Translation</button>
+        <article className='message is-danger'>
+          <div className='message-header'>
+            {translatedInfo.sourceText}
+          </div>
+          <div className='message-body'>
+            <h3 className='title is-3'>{translatedInfo.translatedText}</h3>
+            <button className='button is-warning' onClick={this.handleBookmark.bind(this)}>Bookmark Now</button>
+          </div>
+        </article>
+        
       </div>
     )
     
@@ -69,5 +76,5 @@ class ConnectedTranslationResults extends React.Component <Props, State>{
   }
 }
 
-const TranslationResults = connect(mapStateToProps, mapDispatchToProps)(ConnectedTranslationResults)
-export default TranslationResults
+const TranslationResultsBookmark = connect(mapStateToProps, mapDispatchToProps)(ConnectedTranslationResults_Bookmark)
+export default TranslationResultsBookmark

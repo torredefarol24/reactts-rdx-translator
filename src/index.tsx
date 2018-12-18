@@ -5,7 +5,6 @@ import {Provider} from 'react-redux'
 import store from './state-management/store/store'
 import postActions from './state-management/actions/post-actions'
 
-
 class RootComponent extends React.Component{
   componentDidMount(){
     store.dispatch( postActions.getPostsFromAPI() )

@@ -5,32 +5,38 @@ import AddPost from './addPost'
 
 const DummyPosts:React.FunctionComponent = () =>{
   const PostsIndex = (
-    <div className='column is-half'>
-      <h5 className='title is-5'>Read Posts (Thunk)</h5>
+    <div className='block'>
       <PostsList></PostsList>
     </div>
   )
   const PostBasicDetails = (
     <div className='block'>
-    <h5 className='title is-5'>Basic Details</h5>
-    <PostDetails></PostDetails>
-  </div>
+      <PostDetails></PostDetails>
+    </div>
   )
   const PostAddForm = (
     <div className='block'>
-      <h5 className='title is-5'>Add Post (Thunk)</h5>
       <AddPost></AddPost>
     </div>
   )
   const Posts = (
     <div className='block'>
-      <h3 className='title is-3'>Posts</h3>
-      <div className='columns'>
-        {PostsIndex}
-        <div className='column is-half'>
-          {PostBasicDetails}
-          {PostAddForm}
+      <div className='mt24 mobile-padding'>
+        <h3 className='title is-3'>Posts</h3>
+        <div className='columns'>
+          <div className='column'>
+            {PostBasicDetails}
+          </div>
         </div>
+        <div className='columns mt24'>
+          <div className='column is-half'>
+            {PostsIndex}
+          </div>
+          <div className='column is-half'>
+            {PostAddForm}
+          </div>
+        </div>
+      
       </div>
     </div>
   )

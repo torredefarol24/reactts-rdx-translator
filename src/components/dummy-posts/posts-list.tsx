@@ -41,12 +41,20 @@ class connectedDummyPosts extends React.Component<Props>{
 
     const dummyPosts = (
       <div className='block'>
-        <p className='menu-label'>
-          Dummy Posts 
-        </p>
-        <ul className='menu-list'>
-          {dummyPostsList}
-        </ul>
+        <article className='message is-info'>
+          <div className='message-header'>
+            <p>Read Posts</p>
+          </div>
+          <div className='message-body'>
+            <p className='menu-label'>
+              Dummy Posts 
+            </p>
+            <ul className='menu-list'>
+              {dummyPostsList}
+            </ul>
+          </div>
+        </article>
+
       </div>
     )
 

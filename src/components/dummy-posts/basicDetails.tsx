@@ -38,17 +38,18 @@ class ConnectedPostDetails extends React.Component <Props> {
     const { post } = this.props
 
     const selectedPost = (
-      <div className='block'>
-        <article className="message is-dark">
+      <div className='block mobile-bottom-margin'>
+        <article className="message is-info">
           <div className="message-header">
             <p>{post.title}</p>
           </div>
           <div className="message-body">
             <p className='subtitle'>By: </p><p className='title'><strong>{post.author}</strong></p>
-          </div>
-          <div className='block'>
-            <NavLink className='button is-info' to={{pathname : "/posts/details/" + post.id, state : {post : post} }} > Read More </NavLink>
-            <button className='button is-danger' onClick={ () => this.handleDelete(post.id) }>Delete</button>
+            <div className='block'>
+              <NavLink className='button is-info is-pulled-left' to={{pathname : "/posts/details/" + post.id, state : {post : post} }} > Read More </NavLink>
+              
+              <button className='button is-danger is-pulled-right' onClick={ () => this.handleDelete(post.id) }>Delete</button>
+            </div>
           </div>
         </article>
       </div>

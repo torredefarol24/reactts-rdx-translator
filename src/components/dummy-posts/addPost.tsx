@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import postActions from '../../state-management/actions/post-actions'
+import uuid from 'uuid'
 
 const mapStateToProps = null
 const mapDispatchToProps = (dispatch:any) => {
@@ -37,6 +38,7 @@ class AddConnectedDummyPost extends React.Component<Props, State>{
   handleFormSubmit(event:any){
     event.preventDefault()
     let newPost = {
+      id : uuid(),
       author: this.state.dummyPostAuthor,
       body : this.state.dummyPostBody,
       title : this.state.dummyPostTitle
@@ -70,31 +72,45 @@ class AddConnectedDummyPost extends React.Component<Props, State>{
   }
 
   render(){
-    return(
+
+    const DummyPostForm = (
+      <form onSubmit={this.handleFormSubmit}>
+        <div className="field">
+          <label className="label">Author</label>
+          <div className="control">
+            <input className="input" type="text" placeholder="Your Name" value={this.state.dummyPostAuthor} onChange={this.handleAuthorChange} id="post_author" name="dummyPostAuthor" />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Title</label>
+          <div className="control">
+            <input className="input" type="texpost_titlet" placeholder="Your Post Heading" value={this.state.dummyPostTitle} onChange={this.handleTitleChange} id="post_title" name="dummyPostTitle"/>
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Body</label>
+          <div className="control">
+            <input className="input" type="text" placeholder="Your Message" value={this.state.dummyPostBody} onChange={this.handleBodyChange} id="post_body" name="dummyPostBody"/>
+          </div>
+        </div>
+        <button type='submit' className='button is-success'>Submit</button>
+      </form>
+    )
+
+    const AddForm = (
       <div className='block'>
-        <form onSubmit={this.handleFormSubmit}>
-          <div className="field">
-            <label className="label">Author</label>
-            <div className="control">
-              <input className="input" type="text" placeholder="Your Name" value={this.state.dummyPostAuthor} onChange={this.handleAuthorChange} id="post_author" name="dummyPostAuthor" />
-            </div>
+        <article className='message is-warning'>
+          <div className='message-header'>
+            <p>Add Post</p>
           </div>
-          <div className="field">
-            <label className="label">Title</label>
-            <div className="control">
-              <input className="input" type="texpost_titlet" placeholder="Your Post Heading" value={this.state.dummyPostTitle} onChange={this.handleTitleChange} id="post_title" name="dummyPostTitle"/>
-            </div>
+          <div className='message-body'>
+            {DummyPostForm}
           </div>
-          <div className="field">
-            <label className="label">Body</label>
-            <div className="control">
-              <input className="input" type="text" placeholder="Your Message" value={this.state.dummyPostBody} onChange={this.handleBodyChange} id="post_body" name="dummyPostBody"/>
-            </div>
-          </div>
-          <button type='submit' className='button is-success'>Submit</button>
-        </form>
+        </article>
       </div>
     )
+
+    return AddForm
   }
 }
 

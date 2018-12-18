@@ -97,7 +97,7 @@ class ConnectedTranslatorForm extends React.Component <Props, State>{
         <div className="field">
           <label className="label">Translate To (Target Lang)</label>
           <div className="control">
-            <input className="input" type="text" placeholder="Language Name" defaultValue={this.state.translateToLang} onChange={this.handleTranslateLangChange} id="translateToLang" name="translateToLang"/>
+            <input className="input" type="text" placeholder="Spanish, Russian, Italian, etc ..." defaultValue={this.state.translateToLang} onChange={this.handleTranslateLangChange} id="translateToLang" name="translateToLang"/>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@ class ConnectedTranslatorForm extends React.Component <Props, State>{
     const targetTextDiv = (
       <div className='field'>
         <label className='label'>Text To Translate</label>
-        <textarea className='textarea' placeholder='Type Something in any language' onChange ={this.handleTextChange} defaultValue={this.state.text}>
+        <textarea className='textarea' placeholder='Type Something in any language' onChange ={this.handleTextChange} defaultValue={this.state.text} rows={3}>
         </textarea> 
       </div>
     )

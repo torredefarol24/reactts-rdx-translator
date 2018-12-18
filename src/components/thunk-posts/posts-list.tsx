@@ -30,8 +30,10 @@ class connectedposts extends React.Component<Props>{
     const postList = (
       this.props.posts.map( (post:any) => {
         return (
-          <li key={post.id}>
-            <a className="button dummyPostBtn" onClick={ () => this.showDummyDetails(post.id)}> {post.title} </a>
+          <li key={post.id} >
+            <a className="button dummyPostBtn" onClick={ () => this.showDummyDetails(post.id)}>
+              {post.title}
+            </a>
           </li>
         )
       })
@@ -39,12 +41,19 @@ class connectedposts extends React.Component<Props>{
 
     const posts = (
       <div className='block'>
-        <p className='menu-label'>
-          Posts 
-        </p>
-        <ul className='menu-list'>
-          {postList}
-        </ul>
+        <article className='message is-success'>
+          <div className='message-header'>
+            <p>Read Posts</p>
+          </div>
+          <div className='message-body'>
+            <p className='menu-label'>
+              Posts 
+            </p>
+            <ul className='menu-list'>
+              {postList}
+            </ul>
+          </div>
+        </article>
       </div>
     )
 

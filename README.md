@@ -2,8 +2,9 @@
 
  - Frontend JS Framework : React
  - Libraries :  Redux, Thunk, UUID
- - APIs : Yandex Translator API, JSONTypicode (Fake Rest API) 
+ - APIs : Yandex Translator API, JSONTypicode (Fake Rest API)
  - Design Framework : Bulma
+ - Service Workers for PWA
  
 React/Redux app written in **TypeScript**
 
