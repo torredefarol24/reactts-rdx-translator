@@ -6,9 +6,9 @@ self.addEventListener("install", event => {
       return cache.addAll([
         '/',
         '/index.html',
-        '/serviceWorkers/serviceWorkerChecker.js',
         '/assets/css/styles.css',
-        '/assets/css/bulma.css'
+        '/assets/css/bulma.css',
+        '/favicon.png'
       ])
     })
   )

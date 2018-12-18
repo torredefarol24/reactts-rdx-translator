@@ -1,7 +1,7 @@
 {
   "name": "React-Redux/Thunk-TypeScript Translator",
   "short_name": "ReactTS",
-  "start_url": ".",
+  "start_url": "index.html",
   "icons": [
     {
       "src": "/assets/icons/language-64x64.png",
