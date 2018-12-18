@@ -63,13 +63,13 @@ class ConnectedAddPost extends React.Component<Props, State>{
     const AddPostForm = (
       <form onSubmit={this.handleFormSubmit}>
         <div className="field">
-          <label className="label">Title</label>
+          <label className="label" htmlFor="post_title">Title</label>
           <div className="control">
             <input className="input" type="texpost_titlet" placeholder="Your Post Heading" value={this.state.postTitle} onChange={this.handleTitleChange} id="post_title" name="postTitle"/>
           </div>
         </div>
         <div className="field">
-          <label className="label">Body</label>
+          <label className="label" htmlFor="post_body">Body</label>
           <div className="control">
             <input className="input" type="text" placeholder="Your Message" value={this.state.postBody} onChange={this.handleBodyChange} id="post_body" name="postBody"/>
           </div>

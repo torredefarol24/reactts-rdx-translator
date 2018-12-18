@@ -1,9 +1,8 @@
 .dummyPostBtn{
+  white-space: unset;
   text-align: left
 }
-.bookmarkDelBtn{
-  cursor: pointer
-}
+
 .myName {
   font-family: monospace;
   font-weight: bold
@@ -21,6 +20,9 @@
 }
 .mobile-bottom-margin{
   margin-bottom: 24px;
+}
+.pad-bottom{
+  padding-bottom:36px;
 }
 
 @media only screen and (min-width: 768px) {

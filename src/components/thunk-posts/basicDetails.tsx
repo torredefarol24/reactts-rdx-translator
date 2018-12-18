@@ -34,11 +34,16 @@ class ConnectedPostDetails extends React.Component <Props> {
       <div className='block'>
         <article className="message is-info">
           <div className="message-header">
-            <p>{post.title}</p>
+            <p>Details</p>
           </div>
           <div className="message-body">
-            <NavLink className='button is-warning is-pulled-left' to={{pathname : "/posts/thunk/details/" + post.id, state : {post : post} }} > Read More </NavLink>
-            <button className='button is-danger is-pulled-right' onClick={ () => this.handleDelete(post.id) }>Delete</button>
+            <div className='block'>
+              <h3 className='title is-3'>{post.title}</h3>
+            </div>
+            <div className='block pad-bottom'>
+              <NavLink className='button is-warning is-pulled-left' to={{pathname : "/posts/thunk/details/" + post.id, state : {post : post} }} > Read More </NavLink>
+              <button className='button is-danger is-pulled-right' onClick={ () => this.handleDelete(post.id) }>Delete</button>
+            </div>
           </div>
         </article>
       </div>

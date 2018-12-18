@@ -45,7 +45,7 @@ class ConnectedPostDetails extends React.Component <Props> {
           </div>
           <div className="message-body">
             <p className='subtitle'>By: </p><p className='title'><strong>{post.author}</strong></p>
-            <div className='block'>
+            <div className='block pad-bottom'>
               <NavLink className='button is-info is-pulled-left' to={{pathname : "/posts/details/" + post.id, state : {post : post} }} > Read More </NavLink>
               
               <button className='button is-danger is-pulled-right' onClick={ () => this.handleDelete(post.id) }>Delete</button>

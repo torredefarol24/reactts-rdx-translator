@@ -76,19 +76,19 @@ class AddConnectedDummyPost extends React.Component<Props, State>{
     const DummyPostForm = (
       <form onSubmit={this.handleFormSubmit}>
         <div className="field">
-          <label className="label">Author</label>
+          <label className="label" htmlFor="post_author">Author</label>
           <div className="control">
             <input className="input" type="text" placeholder="Your Name" value={this.state.dummyPostAuthor} onChange={this.handleAuthorChange} id="post_author" name="dummyPostAuthor" />
           </div>
         </div>
         <div className="field">
-          <label className="label">Title</label>
+          <label className="label" htmlFor="post_title">Title</label>
           <div className="control">
             <input className="input" type="texpost_titlet" placeholder="Your Post Heading" value={this.state.dummyPostTitle} onChange={this.handleTitleChange} id="post_title" name="dummyPostTitle"/>
           </div>
         </div>
         <div className="field">
-          <label className="label">Body</label>
+          <label className="label" htmlFor="post_body">Body</label>
           <div className="control">
             <input className="input" type="text" placeholder="Your Message" value={this.state.dummyPostBody} onChange={this.handleBodyChange} id="post_body" name="dummyPostBody"/>
           </div>

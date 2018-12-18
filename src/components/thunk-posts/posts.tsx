@@ -28,7 +28,7 @@ const DummyPosts:React.FunctionComponent = () =>{
             {PostBasicDetails}
           </div>
         </div>
-        <div className='columns mt24'>
+        <div className='columns'>
           <div className='column is-half'>
             {PostsIndex}
           </div>

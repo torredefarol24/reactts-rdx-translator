@@ -46,9 +46,6 @@ class connectedDummyPosts extends React.Component<Props>{
             <p>Read Posts</p>
           </div>
           <div className='message-body'>
-            <p className='menu-label'>
-              Dummy Posts 
-            </p>
             <ul className='menu-list'>
               {dummyPostsList}
             </ul>

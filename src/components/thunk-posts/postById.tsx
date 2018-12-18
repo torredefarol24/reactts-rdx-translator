@@ -89,8 +89,8 @@ class ConnectedPostById extends React.Component <Props, State> {
     )
 
     const postEditForm = (
-      <div className='block'>
-        <h3 className='subtitle is-3'>Edit Post Body</h3>
+      <div className='block mobile-padding'>
+        <h3 className='subtitle is-3'>Edit Post</h3>
         <form onSubmit={this.handleFormSubmit}>
           <div className="field">
             <label className="label">Title</label>
@@ -104,8 +104,8 @@ class ConnectedPostById extends React.Component <Props, State> {
               <input className="input" type="text" placeholder="Your Message" value={this.state.postBody} onChange={this.handleBodyChange} id="post_body" name="dummyPostBody"/>
             </div>
           </div>
-          <button type='submit' className='button is-success'>Submit</button>
-          <button className='button is-primary' onClick={ this.handleBack }>Back</button>
+          <button type='submit' className='button is-success is-pulled-left'>Submit</button>
+          <button className='button is-primary is-pulled-right' onClick={ this.handleBack }>Back</button>
         </form>
       </div>
     )

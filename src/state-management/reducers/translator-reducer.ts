@@ -15,6 +15,7 @@ const TranslatorReducer = (state=initialState, action:any) => {
       let particularState = { 
         ...state, 
         translatedTextResult : {}, 
+        bookmarkStatus : {},
         translationStatus : { message : action.payload }
       }
       return particularState

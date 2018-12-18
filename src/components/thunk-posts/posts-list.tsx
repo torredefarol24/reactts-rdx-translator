@@ -31,7 +31,7 @@ class connectedposts extends React.Component<Props>{
       this.props.posts.map( (post:any) => {
         return (
           <li key={post.id} >
-            <a className="button dummyPostBtn" onClick={ () => this.showDummyDetails(post.id)}>
+            <a className="button is-default dummyPostBtn" onClick={ () => this.showDummyDetails(post.id)} >
               {post.title}
             </a>
           </li>
@@ -46,9 +46,6 @@ class connectedposts extends React.Component<Props>{
             <p>Read Posts</p>
           </div>
           <div className='message-body'>
-            <p className='menu-label'>
-              Posts 
-            </p>
             <ul className='menu-list'>
               {postList}
             </ul>

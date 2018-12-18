@@ -1,29 +1,29 @@
 {
-  "short_name": "ReactTS",
   "name": "React-Redux/Thunk-TypeScript Translator",
+  "short_name": "ReactTS",
   "icons": [
     {
-      "src": "/assets/icons/language-64x64.png",
+      "src": "./assets/icons/language-64x64.png",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "/assets/icons/language-128x128.png",
+      "src": "./assets/icons/language-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/assets/icons/language-256x256.png",
+      "src": "./assets/icons/language-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/assets/icons/language-512x512.png",
+      "src": "./assets/icons/language-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#838996",
   "background_color": "#cccccc"
