@@ -47,12 +47,12 @@ class Navbar extends React.Component{
           <NavLink className="navbar-item" to="/bookmarks" onClick={this.toggleNav.bind(this)}>
             Bookmarks
           </NavLink>
-          <NavLink className="navbar-item" to="/posts/thunk" onClick={this.toggleNav.bind(this)}>
+          {/* <NavLink className="navbar-item" to="/posts/thunk" onClick={this.toggleNav.bind(this)}>
             Posts (Thunk)
           </NavLink>
           <NavLink className="navbar-item" to="/posts" onClick={this.toggleNav.bind(this)}>
             Posts
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
     )
